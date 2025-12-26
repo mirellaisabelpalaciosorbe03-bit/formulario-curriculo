@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Envío de Currículum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        form {
+            background: #ffffff;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 15px 0;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+    <h1>Formulario de Envío de Currículum</h1>
+
+    <label for="nombre">Nombres:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="apellido">Apellidos:</label>
+    <input type="text" id="apellido" name="apellido" required>
+
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" pattern="[0-9]{8}" required>
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha" name="fecha">
+
+    <label for="genero">Género:</label>
+    <select id="genero" name="genero">
+        <option value="">Seleccione</option>
+        <option>Masculino</option>
+        <option>Femenino</option>
+        <option>Otro</option>
+    </select>
+
+    <label for="estudios">Nivel de estudios:</label>
+    <select id="estudios" name="estudios">
+        <option>Secundaria</option>
+        <option>Técnico</option>
+        <option>Universitario</option>
+        <option>Postgrado</option>
+    </select>
+
+    <label for="experiencia">Experiencia laboral:</label>
+    <textarea id="experiencia" name="experiencia" rows="4"></textarea>
+
+    <label for="archivo">Adjuntar Currículum (PDF):</label>
+    <input type="file" id="archivo" name="archivo" accept=".pdf">
+
+    <label>
+        <input type="checkbox" required>
+        Acepto los términos y condiciones
+    </label>
+
+    <button type="submit">Enviar Currículum</button>
+</form>
+
+</body>
+</html>
